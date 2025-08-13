@@ -1173,6 +1173,7 @@ export class PageTaskExecutor {
 
     const yamlFlow: MidsceneYamlFlowItem[] = [];
     while (!isCompleted && currentActionNumber < maxActionNumber) {
+      debug(`actionToGoal::currentActionNumber:${currentActionNumber}`);
       currentActionNumber++;
       const planningTask: ExecutionTaskPlanningApply =
         this.planningTaskToGoal(userPrompt);

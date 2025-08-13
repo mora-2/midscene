@@ -458,6 +458,7 @@ export class PageAgent<PageType extends WebPage = WebPage> {
       return this.runYaml(yaml);
     }
 
+    debug(`isVlmUiTars:${isVlmUiTars}`);
     const { output, executor } = await (isVlmUiTars
       ? this.taskExecutor.actionToGoal(taskPrompt, { cacheable })
       : this.taskExecutor.action(taskPrompt, this.opts.aiActionContext, {
